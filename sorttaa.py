@@ -15,8 +15,8 @@ def main():
         data = f.read()
 
     # replace {{headerStr}}
-    today = datetime.now().strftime("%A %d.%m.%Y")
-    data = data.replace('{{headerStr}}', today)
+    today = datetime.now().strftime("%d.%m.%Y")
+    data = data.replace('{{headerStr}}', 'Kuvia - Generoitu: ' + today)
 
     # replace {{rows}}
     a = os.listdir(image_dir)
