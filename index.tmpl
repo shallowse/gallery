@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="utf-8">
+    <title>Kuvat</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- CSS based on Boostrap 4 implementation: https://github.com/twbs/bootstrap -->
+    
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: inherit;
+        }
+
+        .container {
+            width: 100%;
+            /*
+            padding-right: 15px;
+            padding-left: 15px;
+            */
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+        @media (min-width: 992px) {
+            .container {
+                max-width: 960px;
+            }
+        }
+
+        @media (min-width: 1200px) {
+            .container {
+                max-width: 1140px;
+            }
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            /*
+            margin-right: -15px;
+            margin-left: -15px;
+            */
+        }
+
+        .col-12 {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+
+        @media (min-width: 768px) {
+            .col-md-6 {
+                flex: 0 0 50%;
+                max-width: 50%;
+            }
+        }
+
+        @media (min-width: 992px) {
+            .col-lg-3 {
+                flex: 0 0 25%;
+                max-width: 25%;
+            }
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial;
+        }
+
+        .header {
+            text-align: center;
+            padding: 32px;
+        }
+
+        img {
+            vertical-align: middle;
+            width: 100%;
+        }
+
+        .img-fluid {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>{{headerStr}}</h1>
+    </div>
+
+    <!-- Photos -->
+    <div class="container"> 
+        <div class="row">
+            {{rows}}
+        </div>
+    </div>
+</body>
+</html>
